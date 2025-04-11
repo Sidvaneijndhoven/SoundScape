@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <!-- Logo -->
-    <img src="./assets/media/logo.jpg" alt="House" class="w-1/6 h-1/6 object-cover m-0 p-0 mx-auto mb-80 mt-20" id="SmallTransform"/>
+    <img src="./assets/media/logo.jpg" alt="House" class="w-1/6 h-1/6 object-cover m-0 p-0 mx-auto mb-80 mt-20" id="SmallTransform" ref="logo"/>
 
     <section>
       <div class="devider flex items-center">
@@ -31,19 +31,27 @@
             class="rounded"
             alt=""
             id="SmallTransform"
-          />
+            ref="HeaderAnimation"
+          />  
         </div>
       </div>
-      <button class="text-center rounded border-1 p-2 w-1/5" id="SmallTransform">
+      <button class="text-center rounded border-1 p-2 w-1/5" id="SmallTransform" ref="StartListening">
           Start Listening
       </button>
     </div>
   </section>
-
+  <!-- Blogcards -->
+   
   <!-- Blog Card 1 -->
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 mt-50 mb-200">
-      <div class="h-32 rounded bg-gray-300">
-        <article class="overflow-hidden rounded-lg border-2 border-gray-100 bg-white shadow-xs w-4/5 mx-auto">
+    <div class="devider flex items-center mt-75">
+        <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
+        <div class="shrink-0 px-4 text-gray-900">🎧🎙️🎧</div>
+        <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
+    </div>
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 mt-20 mb-200">
+      
+      <div class="h-32 rounded bg-gray-300" id="SmallTransform">
+        <article class="overflow-hidden rounded-lg border-2 border-gray-100 bg-white shadow-xs w-4/5 mx-auto" ref="Blogcard1Animation">
           <img
             alt=""
             src="./assets/media/discover.png"
@@ -67,9 +75,9 @@
             </div>
         </article>
       </div>
-      <div class="h-32 rounded bg-gray-300">
+      <div class="h-32 rounded bg-gray-300" id="SmallTransform">
         <!-- Blogcard 2 -->
-        <article class="overflow-hidden rounded-lg border-2 border-gray-100 bg-white shadow-xs w-4/5 mx-auto">
+        <article class="overflow-hidden rounded-lg border-2 border-gray-100 bg-white shadow-xs w-4/5 mx-auto" ref="Blogcard2Animation" id="Transform">
           <img
             alt=""
             src="./assets/media/blogCard.jpg"
@@ -102,4 +110,88 @@
 
 <script setup> 
 import Footer from './components/Footer.vue'
+import { onMounted, ref } from "vue";
+import { animate } from "motion";
+import { useIntersectionObserver } from "@vueuse/core";
+
+const logo = ref(null);
+const StartListening = ref(null);
+const HeaderAnimation = ref(null);
+const Blogcard1Animation = ref(null);
+const Blogcard2Animation = ref(null);
+
+// om de animatie te laten zien
+// Blogcard animation
+useIntersectionObserver(Blogcard1Animation, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(Blogcard1Animation.value, 
+        { 
+          opacity: [0, 1], 
+          scale: [0.8, 1], 
+          x: [-200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+
+useIntersectionObserver(Blogcard2Animation, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(Blogcard2Animation.value, 
+        { 
+          opacity: [0, 1],  
+          scale: [0.8, 1], 
+          x: [200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+// Header animation
+useIntersectionObserver(StartListening, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(StartListening.value, 
+        { 
+          opacity: [0, 1], 
+          scale: [0.8, 1], 
+          x: [-200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+
+useIntersectionObserver(HeaderAnimation, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    animate(HeaderAnimation.value, { opacity: [0, 1], scale: [0.8, 1] }, { duration: 1, easing: "ease-out" });
+  }
+});
+
+
+// Logo animatie
+useIntersectionObserver(logo, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(logo.value, 
+        { 
+          opacity: [0, 1], 
+          scale: [0.8, 1], 
+          rotate: [0, 360],      
+          x: [-700, 0]           
+        }, 
+        { 
+          duration: 1.5, 
+          easing: "ease-out"    
+        }
+      );
+    }
+  });
 </script>
