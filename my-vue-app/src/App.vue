@@ -1,6 +1,105 @@
 <template>
-  <div class="main bg-blue-700">test</div>
+  <div class="main">
+    <!-- Logo -->
+    <img src="./assets/media/logo.jpg" alt="House" class="w-1/6 h-1/6 object-cover m-0 p-0 mx-auto mb-80 mt-20" id="SmallTransform"/>
+
+    <section>
+      <div class="devider flex items-center">
+        <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
+
+        <div class="shrink-0 px-4 text-gray-900">🎧🎙️🎧</div>
+        <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
+
+      </div>
+    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-4 md:items-center md:gap-8">
+        <div class="md:col-span-1">
+          <div class="max-w-lg md:max-w-none">
+            <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
+              Escape Into Sound: A Journey Through Tranquil Soundscapes
+            </h2>
+  
+            <p class="mt-4 text-gray-700">
+              Step away from the chaos of everyday life and immerse yourself in the calming embrace of sound. From nature’s whispers to ambient melodies, each track is crafted to help you relax, focus, or simply unwind. Let the rhythm of the world guide you to a peaceful state of mind. Perfect for work, meditation, or moments of stillness, discover your own sanctuary in every sound.
+            </p>
+          </div>
+        </div>
+        
+        <div class="md:col-span-3" >
+          <img
+            src="./assets/media/header.jpg"
+            class="rounded"
+            alt=""
+            id="SmallTransform"
+          />
+        </div>
+      </div>
+      <button class="text-center rounded border-1 p-2 w-1/5" id="SmallTransform">
+          Start Listening
+      </button>
+    </div>
+  </section>
+
+  <!-- Blog Card 1 -->
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 mt-50 mb-200">
+      <div class="h-32 rounded bg-gray-300">
+        <article class="overflow-hidden rounded-lg border-2 border-gray-100 bg-white shadow-xs w-4/5 mx-auto">
+          <img
+            alt=""
+            src="./assets/media/discover.png"
+            class="h-56 w-full object-cover"
+          />
+          <div class="p-4 sm:p-6">
+            <a href="#">
+              <h3 class="text-lg font-medium text-gray-900">
+                The Art of Sound Design: Crafting the Perfect Atmosphere
+              </h3>
+            </a>
+            <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+              Explore the creative process behind crafting immersive soundscapes. Learn how sound designers use a combination of techniques and tools to create realistic, atmospheric audio experiences that transport you to new worlds.  
+            </p>
+            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">
+              Find out more
+              <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                &rarr;
+              </span>
+            </a>
+            </div>
+        </article>
+      </div>
+      <div class="h-32 rounded bg-gray-300">
+        <!-- Blogcard 2 -->
+        <article class="overflow-hidden rounded-lg border-2 border-gray-100 bg-white shadow-xs w-4/5 mx-auto">
+          <img
+            alt=""
+            src="./assets/media/blogCard.jpg"
+            class="h-56 w-full object-cover"
+          />
+          <div class="p-4 sm:p-6">
+            <a href="#">
+              <h3 class="text-lg font-medium text-gray-900">
+                The Science of Sound: How Music Can Enhance Your Mood
+              </h3>
+            </a>
+            <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
+              Dive into the fascinating world of sound science. Discover how different frequencies and melodies can influence your emotions, boost productivity, and even improve your mental health. Learn how the right sound can transform your day.
+            </p>
+            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">
+              Find out more
+              <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
+                &rarr;
+              </span>
+            </a>
+            </div>
+        </article>
+      </div>
+    </div>   
+    <Footer class="mt-auto"></Footer>  
+
+  </div>
 </template>
+  
 
 <script setup> 
+import Footer from './components/Footer.vue'
 </script>

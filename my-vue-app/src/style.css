@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+*
+{
+    font-family:'Franklin Gothic Medium';
+    background-color: rgb(37, 36, 36);
+    color: white;
+}
+
+#SmallTransform:hover
+{
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+#Transform:hover
+{
+    transform: scale(1.1);
+    cursor: pointer;
+}
