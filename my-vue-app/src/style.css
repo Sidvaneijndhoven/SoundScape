@@ -18,3 +18,10 @@
     transform: scale(1.1);
     cursor: pointer;
 }
+
+#SmallBoxTransform:hover
+{
+    transform: scale(1.02);
+    cursor: pointer;
+    box-shadow: 0 0 20px 10px rgba(253, 244, 1, 0.5);
+}

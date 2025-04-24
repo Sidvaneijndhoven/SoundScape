@@ -1,15 +1,12 @@
 <template>
   <div class="main">
     <!-- Logo -->
-    <img src="./assets/media/logo.jpg" alt="House" class="w-1/6 h-1/6 object-cover m-0 p-0 mx-auto mb-80 mt-20" id="SmallTransform" ref="logo"/>
-
+    <img src="./assets/media/logo.jpg" alt="House" class="w-1/6 h-1/6 object-cover m-0 p-0 mx-auto mb-50 mt-20" id="SmallTransform" ref="logo"/>
     <section>
       <div class="devider flex items-center">
         <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
-
         <div class="shrink-0 px-4 text-gray-900">🎧🎙️🎧</div>
         <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
-
       </div>
     <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 gap-4 md:grid-cols-4 md:items-center md:gap-8">
@@ -18,13 +15,11 @@
             <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
               Escape Into Sound: A Journey Through Tranquil Soundscapes
             </h2>
-  
             <p class="mt-4 text-gray-700">
               Step away from the chaos of everyday life and immerse yourself in the calming embrace of sound. From nature’s whispers to ambient melodies, each track is crafted to help you relax, focus, or simply unwind. Let the rhythm of the world guide you to a peaceful state of mind. Perfect for work, meditation, or moments of stillness, discover your own sanctuary in every sound.
             </p>
           </div>
         </div>
-        
         <div class="md:col-span-3" >
           <img
             src="./assets/media/header.jpg"
@@ -41,7 +36,6 @@
     </div>
   </section>
   <!-- Blogcards -->
-   
   <!-- Blog Card 1 -->
     <div class="devider flex items-center mt-75">
         <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
@@ -49,7 +43,6 @@
         <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
     </div>
     <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 mt-20 mb-200">
-      
       <div class="h-32 rounded bg-gray-300" id="SmallTransform">
         <article class="overflow-hidden rounded-lg border-2 border-gray-100 bg-white shadow-xs w-4/5 mx-auto" ref="Blogcard1Animation">
           <img
@@ -101,18 +94,36 @@
             </div>
         </article>
       </div>
-    </div>   
+    </div>  
+    <div class="devider flex items-center mt-75">
+        <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
+        <div class="shrink-0 px-4 text-gray-900">🎧🎙️🎧</div>
+        <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
+    </div>
+    <!-- Events tab -->
+     <div class="events">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mt-20">
+        <div class="h-auto rounded bg-gray-300">
+          <img src="./assets/media/EventPoster1.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto" id="SmallBoxTransform">
+        </div>
+        <div class="h-auto rounded bg-gray-300">
+          <img src="./assets/media/EventPoster2.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto" id="SmallBoxTransform">
+        </div>
+        <div class="h-auto rounded bg-gray-300">
+          <img src="./assets/media/EventPoster3.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto" id="SmallBoxTransform">
+        </div>
+      </div>
+     </div>
     <Footer class="mt-auto"></Footer>  
-
   </div>
 </template>
   
-
 <script setup> 
 import Footer from './components/Footer.vue'
 import { onMounted, ref } from "vue";
 import { animate } from "motion";
 import { useIntersectionObserver } from "@vueuse/core";
+
 
 const logo = ref(null);
 const StartListening = ref(null);
@@ -175,8 +186,6 @@ useIntersectionObserver(HeaderAnimation, ([{ isIntersecting }]) => {
     animate(HeaderAnimation.value, { opacity: [0, 1], scale: [0.8, 1] }, { duration: 1, easing: "ease-out" });
   }
 });
-
-
 // Logo animatie
 useIntersectionObserver(logo, ([{ isIntersecting }]) => {
     if (isIntersecting) {
