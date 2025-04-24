@@ -101,19 +101,30 @@
         <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
     </div>
     <!-- Events tab -->
-     <div class="events">
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 mt-20">
+    <div class="events">
+      <div class="AboutEvent min-h-screen w-full flex flex-col justify-center items-center">
+        <img src="./assets/media/Tomorrowland.jpg" alt="House" class="w-3/5 h-auto object-cover m-10 p-0 mx-auto rounded-2xl" id="SmallBoxTransform">
+        <!-- w-11/12 of the width of parent container lg is a responsiveness -->
+        <p class="text-center w-11/12 lg:w-1/2 text-2xl mb-20">
+          Experience immersive sound events with live performances and interactive installations that inspire creativity and relaxation.
+        </p>
+        <p class="text-center w-11/12 lg:w-1/2 text-2xl mb-10">
+          Upcomming events include:
+        </p>
+      </div>
+      <!-- Grid responsive -->
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 ">  
         <div class="h-auto rounded bg-gray-300">
-          <img src="./assets/media/EventPoster1.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto" id="SmallBoxTransform">
+          <img src="./assets/media/EventPoster1.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform">
         </div>
         <div class="h-auto rounded bg-gray-300">
-          <img src="./assets/media/EventPoster2.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto" id="SmallBoxTransform">
+          <img src="./assets/media/EventPoster2.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform">
         </div>
         <div class="h-auto rounded bg-gray-300">
-          <img src="./assets/media/EventPoster3.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto" id="SmallBoxTransform">
+          <img src="./assets/media/EventPoster3.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform">
         </div>
       </div>
-     </div>
+    </div>
     <Footer class="mt-auto"></Footer>  
   </div>
 </template>
@@ -123,6 +134,7 @@ import Footer from './components/Footer.vue'
 import { onMounted, ref } from "vue";
 import { animate } from "motion";
 import { useIntersectionObserver } from "@vueuse/core";
+
 
 
 const logo = ref(null);
