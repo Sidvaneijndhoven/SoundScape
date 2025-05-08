@@ -6,39 +6,25 @@
 -->
 <template>
   <div class="main">
-    <div class="bg-gray-800 flex flex-col justify-between">
+    <div class="bg-gray-800  flex flex-col justify-between">
       <div class="flex items-center justify-between px-4 py-6 bg-gray-900 text-white">
         <h1 class="text-2xl font-bold">&copy; Soundscape</h1>
         <nav class="space-x-4">
           <a href="#calander" class="hover:text-gray-300 text-2xl">Login 🔐</a>
         </nav>
       </div>
-
-      <!-- Login Modal -->
-      <div v-if="showLogin" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div class="bg-white p-6 rounded shadow-lg max-w-md w-full">
-          <!-- Close button -->
-          <button @click="showLogin = false" class="absolute top-4 right-4 text-black text-xl">&times;</button>
-
-          <!-- Your custom login form goes here -->
-          <h2 class="text-xl font-bold mb-4">Login</h2>
-          <form>
-            <!-- Add your form fields here -->
-          </form>
-        </div>
-      </div>
     </div>
 
     <!-- Logo -->
     <img src="./assets/media/logo.jpg" alt="House" class="w-1/6 h-1/6 object-cover m-0 p-0 mx-auto mb-50 mt-20" id="SmallTransform" ref="logo"/>
-
+    
     <section>
       <div class="devider flex items-center">
         <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
         <div class="shrink-0 px-4 text-gray-900">🎧🎙️🎧</div>
         <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
       </div>
-
+      
       <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-4 md:items-center md:gap-8">
           <div class="md:col-span-1">
@@ -58,9 +44,10 @@
               alt=""
               id="SmallTransform"
               ref="HeaderAnimation"
-            />
+            />  
           </div>
         </div>
+        
         <button class="text-center rounded border-1 p-2 w-1/5" id="SmallTransform" ref="StartListening" @click="WorkInProgress">
           Start Listening
         </button>
@@ -68,6 +55,7 @@
     </section>
 
     <!-- Blogcards -->
+    <!-- Blog Card 1 -->
     <div class="devider flex items-center mt-75">
       <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
       <div class="shrink-0 px-4 text-gray-900">🎧🎙️🎧</div>
@@ -85,7 +73,7 @@
           <div class="p-4 sm:p-6">
             <a href="#">
               <h3 class="text-lg font-medium text-gray-900">
-                Your Beat on Music News & Events
+                 Your Beat on Music News & Events
               </h3>
             </a>
             <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
@@ -100,7 +88,9 @@
           </div>
         </article>
       </div>
+
       <div class="h-32 rounded" id="SmallTransform">
+        <!-- Blogcard 2 -->
         <article class="overflow-hidden rounded-lg border-2 border-gray-100 bg-gray-800 shadow-xs w-4/5 mx-auto" ref="Blogcard2Animation" id="Transform">
           <img
             alt=""
@@ -125,7 +115,7 @@
           </div>
         </article>
       </div>
-    </div>
+    </div>  
 
     <div class="devider flex items-center my-25">
       <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
@@ -137,6 +127,7 @@
     <div class="events">
       <div class="AboutEvent min-h-screen w-full flex flex-col justify-center items-center bg-gray-800 mb-20">
         <img src="./assets/media/Tomorrowland.jpg" alt="House" class="w-3/5 h-auto object-cover m-10 p-0 mx-auto rounded-2xl " id="SmallBoxTransform">
+        <!-- w-11/12 of the width of parent container lg is a responsiveness -->
         <p class="text-center w-11/12 lg:w-1/2 text-2xl mb-20">
           Experience immersive sound events with live performances and interactive installations that inspire creativity and relaxation.
         </p>
@@ -145,12 +136,12 @@
       <!-- Grid responsive -->
       <div class="relative w-full">
         <img src="./assets/media/soundback.png" class="w-2/5 h-1/4 object-cover mx-auto rounded" id="SmallTransform">
-        <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-4xl mb-15" style="font-family: fantasy;">
+        <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-4xl mb-15" style=" font-family: fantasy;">
           3<br> 🎙 most popular upcoming events 🎙
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8">
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 ">  
         <div class="h-auto rounded">
           <img src="./assets/media/EventPoster1.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card1Animation">
         </div>
@@ -162,22 +153,181 @@
         </div>
       </div>
     </div>
-
-    <footer class="footer flex flex-col justify-center items-center p-6 bg-gray-900 text-white">
-      <p class="text-center">© 2025 Soundscape. All rights reserved.</p>
-    </footer>
+    <div class="footer">
+      <div class="h-20 w-full bg-gradient-to-r from-gray-800 to-black flex justify-between items-center px-8 text-white">
+        <p class="text-sm font-semibold">© 2025 Soundscape - All Rights Reserved</p>
+      </div>
+    </div>
   </div>
 </template>
 
-<script setup>
-  import { ref } from 'vue';
+<script setup> 
+import Footer from './components/Footer.vue'
+import { onMounted, ref } from "vue";
+import { animate } from "motion";
+import { useIntersectionObserver } from "@vueuse/core";
+import { useToast } from 'vue-toastification'
 
-  // State for login modal
-  const showLogin = ref(false);
+const toast = useToast()
 
-  // Method to handle button click (to be developed)
-  const WorkInProgress = () => {
-    alert('This feature is still under development.');
-  };
+function bookNow() {
+  toast.success('✅ Booking added to profile! check your profile for more information')
+}
+
+function WorkInProgress() {
+  toast.error('🚧 This is still in development!')
+}
+
+// LOGIN
+const showLogin = ref(false)
+
+const logo = ref(null);
+const StartListening = ref(null);
+const HeaderAnimation = ref(null);
+const Blogcard1Animation = ref(null);
+const Blogcard2Animation = ref(null);
+const card1Animation = ref(null);
+const card2Animation = ref(null);
+const card3Animation = ref(null);
+const tableAnimation = ref(null);
+
+// om de animatie te laten zien\
+// table animation
+useIntersectionObserver(tableAnimation, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(tableAnimation.value, 
+        { 
+          opacity: [0, 1], 
+          scale: [0.8, 1], 
+          y: [200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+
+// Blogcard animation
+useIntersectionObserver(Blogcard1Animation, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(Blogcard1Animation.value, 
+        { 
+          opacity: [0, 1], 
+          scale: [0.8, 1], 
+          x: [-200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+
+useIntersectionObserver(Blogcard2Animation, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(Blogcard2Animation.value, 
+        { 
+          opacity: [0, 1],  
+          scale: [0.8, 1], 
+          x: [200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+
+// Event card animation
+useIntersectionObserver(card1Animation, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(card1Animation.value, 
+        { 
+          opacity: [0, 1],  
+          scale: [0.8, 1], 
+          x: [200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+
+useIntersectionObserver(card2Animation, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    animate(card2Animation.value, 
+      { 
+        opacity: [0, 1],  
+        scale: [0.8, 1], 
+        x: [-200, 0]           
+      }, 
+      { 
+        duration: 1, 
+        easing: "ease-in"    
+      }
+    );
+  }
+});
+
+
+useIntersectionObserver(card3Animation, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    animate(card3Animation.value, 
+      { 
+        opacity: [0, 1],  
+        scale: [0.8, 1], 
+      }, 
+      { 
+        duration: 1, 
+        easing: "ease-in"    
+      }
+    );
+  }
+});
+
+// Header animation
+useIntersectionObserver(StartListening, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(StartListening.value, 
+        { 
+          opacity: [0, 1], 
+          scale: [0.8, 1], 
+          x: [-200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+
+useIntersectionObserver(HeaderAnimation, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    animate(HeaderAnimation.value, { opacity: [0, 1], scale: [0.8, 1] }, { duration: 1, easing: "ease-out" });
+  }
+});
+// Logo animatie
+useIntersectionObserver(logo, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(logo.value, 
+        { 
+          opacity: [0, 1], 
+          scale: [0.8, 1], 
+          rotate: [0, 360],      
+          x: [-700, 0]           
+        }, 
+        { 
+          duration: 1.5, 
+          easing: "ease-out"    
+        }
+      );
+    }
+  });
 </script>
-
