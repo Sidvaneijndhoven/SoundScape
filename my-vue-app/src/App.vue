@@ -48,7 +48,7 @@
         <div class="shrink-0 px-4 text-gray-900">🎧🎙️🎧</div>
         <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
     </div>
-    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 mt-20 mb-200">
+    <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 mt-20 mb-100">
       <div class="h-32 rounded" id="SmallTransform">
         <article class="overflow-hidden rounded-lg border-2 border-gray-100 bg-gray-800 shadow-xs w-4/5 mx-auto" ref="Blogcard1Animation">
           <img
@@ -59,13 +59,13 @@
           <div class="p-4 sm:p-6">
             <a href="#">
               <h3 class="text-lg font-medium text-gray-900">
-                The Art of Sound Design: Crafting the Perfect Atmosphere
+                 Your Beat on Music News & Events
               </h3>
             </a>
             <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-              Explore the creative process behind crafting immersive soundscapes. Learn how sound designers use a combination of techniques and tools to create realistic, atmospheric audio experiences that transport you to new worlds.  
+              Dive into Soundscape — your go-to hub for the latest music news, artist spotlights, album drops, and live event coverage. From local scenes to global stages, we bring the rhythm of the music world straight to you.
             </p>
-            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">
+            <a href="#calander" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">
               Find out more
               <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
                 &rarr;
@@ -85,13 +85,13 @@
           <div class="p-4 sm:p-6">
             <a href="#">
               <h3 class="text-lg font-medium text-gray-900">
-                The Science of Sound: How Music Can Enhance Your Mood
+                Soundscape: Where Music Lives & Events Come Alive
               </h3>
             </a>
             <p class="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-              Dive into the fascinating world of sound science. Discover how different frequencies and melodies can influence your emotions, boost productivity, and even improve your mental health. Learn how the right sound can transform your day.
+              Discover breaking music news, buzzing event updates, and behind-the-scenes stories — all in one place. Soundscape is your backstage pass to everything happening in the world of music.
             </p>
-            <a href="#" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">
+            <a href="#calander" class="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600">
               Find out more
               <span aria-hidden="true" class="block transition-all group-hover:ms-0.5 rtl:rotate-180">
                 &rarr;
@@ -116,27 +116,38 @@
         </p>
       </div>
       <!-- Grid responsive -->
-      <p class="text-center text-2xl mb-15">
-          Upcomming events include:
+      <div class="relative w-full">
+        <img src="./assets/media/soundback.png" class="w-2/5 h-1/4 object-cover mx-auto rounded" id="SmallTransform">
+        <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-4xl mb-15" style=" font-family: fantasy;">
+          3<br> 🎙 most popular upcoming events 🎙
         </p>
+      </div>
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 ">  
         <div class="h-auto rounded">
-          <img src="./assets/media/EventPoster1.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform">
+          <img src="./assets/media/EventPoster1.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card1Animation">
         </div>
         <div class="h-auto rounded">
-          <img src="./assets/media/EventPoster2.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform">
+          <img src="./assets/media/EventPoster2.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card3Animation">
         </div>
         <div class="h-auto rounded">
-          <img src="./assets/media/EventPoster3.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform">
+          <img src="./assets/media/EventPoster3.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card2Animation">
         </div>
       </div>
     </div>
+    <div class="devider flex items-center">
+        <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
+        <div class="shrink-0 px-4 text-gray-900">🎧🎙️🎧</div>
+        <span class="h-px flex-1 bg-gradient-to-l from-transparent to-gray-300"></span>
+    </div>
     <!-- Event calander -->
-    <div class="overflow-x-auto w-90% mx-auto p-10">
-      <p class="text-center text-2xl mb-15">
-        <!-- Optional heading or content -->
-      </p>
-      <table class="min-w-full bg-gray-500 border-collapse border rounded-2xl border-gray-800 mb-20">
+    <div id="calander" class="overflow-x-auto w-90% mx-auto p-10">
+      <div class="relative w-full">
+        <img src="./assets/media/soundback.png" class="w-2/5 h-1/4 object-cover mx-auto rounded" id="SmallTransform">
+        <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-4xl mb-15" style=" font-family: fantasy;">
+          🎵 Upcoming events 🎹
+        </p>
+      </div>
+      <table class="min-w-full bg-gray-500 border-collapse border rounded-2xl border-gray-800 mb-20" ref="tableAnimation">
         <thead>
           <tr class="bg-gray-600">
             <th class="p-4 text-left text-sm font-semibold text-gray-700">Event</th>
@@ -192,10 +203,18 @@
               <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
             </td>
           </tr>
+          <tr>
+            <td class="p-4">Electric Daisy Carnival</td>
+            <td class="p-4">21-05-2025</td>
+            <td class="p-4">$350</td>
+            <td class="p-4">Las Vegas, Nevada</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
         </tbody>
       </table>
   </div>
-
     <Footer class="mt-auto"></Footer>  
   </div>
 </template>
@@ -211,8 +230,29 @@ const StartListening = ref(null);
 const HeaderAnimation = ref(null);
 const Blogcard1Animation = ref(null);
 const Blogcard2Animation = ref(null);
+const card1Animation = ref(null);
+const card2Animation = ref(null);
+const card3Animation = ref(null);
+const tableAnimation = ref(null);
 
-// om de animatie te laten zien
+// om de animatie te laten zien\
+// table animation
+useIntersectionObserver(tableAnimation, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(tableAnimation.value, 
+        { 
+          opacity: [0, 1], 
+          scale: [0.8, 1], 
+          y: [200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+
 // Blogcard animation
 useIntersectionObserver(Blogcard1Animation, ([{ isIntersecting }]) => {
     if (isIntersecting) {
@@ -245,6 +285,56 @@ useIntersectionObserver(Blogcard2Animation, ([{ isIntersecting }]) => {
       );
     }
   });
+
+// Event card animation
+useIntersectionObserver(card1Animation, ([{ isIntersecting }]) => {
+    if (isIntersecting) {
+      animate(card1Animation.value, 
+        { 
+          opacity: [0, 1],  
+          scale: [0.8, 1], 
+          x: [200, 0]           
+        }, 
+        { 
+          duration: 1, 
+          easing: "ease-in"    
+        }
+      );
+    }
+  });
+
+useIntersectionObserver(card2Animation, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    animate(card2Animation.value, 
+      { 
+        opacity: [0, 1],  
+        scale: [0.8, 1], 
+        x: [-200, 0]           
+      }, 
+      { 
+        duration: 1, 
+        easing: "ease-in"    
+      }
+    );
+  }
+});
+
+
+useIntersectionObserver(card3Animation, ([{ isIntersecting }]) => {
+  if (isIntersecting) {
+    animate(card3Animation.value, 
+      { 
+        opacity: [0, 1],  
+        scale: [0.8, 1], 
+      }, 
+      { 
+        duration: 1, 
+        easing: "ease-in"    
+      }
+    );
+  }
+});
+
 // Header animation
 useIntersectionObserver(StartListening, ([{ isIntersecting }]) => {
     if (isIntersecting) {
