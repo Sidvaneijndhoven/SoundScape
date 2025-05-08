@@ -154,7 +154,7 @@
       </div>
     </div>
     <!-- Event calander -->
-    <div class="relative w-full">
+    <div class="relative w-full" id="calander">
         <img src="./assets/media/soundback.png" class="w-2/5 h-1/4 object-cover mx-auto rounded" id="SmallTransform">
         <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-4xl mb-15" style=" font-family: fantasy;">
          🎶 Upcoming events 🎙
@@ -178,7 +178,7 @@
             <td class="p-4">€200</td>
             <td class="p-4">Boom, Belgium</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
           <tr>
@@ -187,7 +187,7 @@
             <td class="p-4">$500</td>
             <td class="p-4">Indio, California</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
           <tr>
@@ -196,7 +196,7 @@
             <td class="p-4">£250</td>
             <td class="p-4">Pilton, England</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
           <tr>
@@ -205,7 +205,7 @@
             <td class="p-4">$300</td>
             <td class="p-4">Chicago, Illinois</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
           <tr>
@@ -214,7 +214,7 @@
             <td class="p-4">$400</td>
             <td class="p-4">Miami, Florida</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
         </tbody>
