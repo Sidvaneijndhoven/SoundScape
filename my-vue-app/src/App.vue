@@ -36,7 +36,7 @@
           />  
         </div>
       </div>
-      <button class="text-center rounded border-1 p-2 w-1/5" id="SmallTransform" ref="StartListening">
+      <button class="text-center rounded border-1 p-2 w-1/5" id="SmallTransform" ref="StartListening" @click="WorkInProgress">
           Start Listening
       </button>
     </div>
@@ -164,7 +164,7 @@
             <td class="p-4">€200</td>
             <td class="p-4">Boom, Belgium</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
           <tr>
@@ -173,7 +173,7 @@
             <td class="p-4">$500</td>
             <td class="p-4">Indio, California</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow"> Book Now!</button>
             </td>
           </tr>
           <tr>
@@ -182,7 +182,7 @@
             <td class="p-4">£250</td>
             <td class="p-4">Pilton, England</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
           <tr>
@@ -191,7 +191,7 @@
             <td class="p-4">$300</td>
             <td class="p-4">Chicago, Illinois</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
           <tr>
@@ -200,7 +200,7 @@
             <td class="p-4">$400</td>
             <td class="p-4">Miami, Florida</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
           <tr>
@@ -209,7 +209,7 @@
             <td class="p-4">$350</td>
             <td class="p-4">Las Vegas, Nevada</td>
             <td class="p-4">
-              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer" @click="bookNow">Book Now!</button>
             </td>
           </tr>
         </tbody>
@@ -224,6 +224,18 @@ import Footer from './components/Footer.vue'
 import { onMounted, ref } from "vue";
 import { animate } from "motion";
 import { useIntersectionObserver } from "@vueuse/core";
+import { useToast } from 'vue-toastification'
+
+const toast = useToast()
+
+function bookNow() {
+  toast.success('✅ Booking added to profile! check your profile for more information')
+}
+
+function WorkInProgress() {
+  toast.error('🚧 This is still in development!')
+}
+
 
 const logo = ref(null);
 const StartListening = ref(null);
