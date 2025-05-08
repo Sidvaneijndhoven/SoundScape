@@ -16,8 +16,10 @@
     </div>
 
     <!-- Logo -->
-    <img src="./assets/media/logo.jpg" alt="House" class="w-1/6 h-1/6 object-cover m-0 p-0 mx-auto mb-50 mt-20" id="SmallTransform" ref="logo"/>
-    
+    <img src="./assets/media/logo.jpg" alt="House" 
+     class="w-3/4 sm:w-2/3 md:w-1/6 object-cover m-0 p-0 mx-auto mb-10 mt-10" 
+     id="SmallTransform" ref="logo"/> 
+         
     <section>
       <div class="devider flex items-center">
         <span class="h-px flex-1 bg-gradient-to-r from-transparent to-gray-300"></span>
@@ -136,7 +138,7 @@
       <!-- Grid responsive -->
       <div class="relative w-full">
         <img src="./assets/media/soundback.png" class="w-2/5 h-1/4 object-cover mx-auto rounded" id="SmallTransform">
-        <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-4xl mb-15" style=" font-family: fantasy;">
+        <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-4xl mb-15 sm:mb-20" style=" font-family: fantasy;">
           3<br> 🎙 most popular upcoming events 🎙
         </p>
       </div>
