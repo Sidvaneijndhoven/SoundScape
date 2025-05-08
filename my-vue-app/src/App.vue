@@ -1,3 +1,9 @@
+<!-- 
+  Made by: Sid van Eijndhoven
+  Date: 8-5-2025
+  File: App.vue
+  Description: One page website
+-->
 <template>
   <div class="main">
     <!-- Logo -->
@@ -125,6 +131,71 @@
         </div>
       </div>
     </div>
+    <!-- Event calander -->
+    <div class="overflow-x-auto w-90% mx-auto p-10">
+      <p class="text-center text-2xl mb-15">
+        <!-- Optional heading or content -->
+      </p>
+      <table class="min-w-full bg-gray-500 border-collapse border rounded-2xl border-gray-800 mb-20">
+        <thead>
+          <tr class="bg-gray-600">
+            <th class="p-4 text-left text-sm font-semibold text-gray-700">Event</th>
+            <th class="p-4 text-left text-sm font-semibold text-gray-700">Date</th>
+            <th class="p-4 text-left text-sm font-semibold text-gray-700">Price</th>
+            <th class="p-4 text-left text-sm font-semibold text-gray-700">Location</th>
+            <th class="p-4 text-left text-sm font-semibold text-gray-700"></th> <!-- Added Action column -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-4">Tomorrowland</td>
+            <td class="p-4">20-07-2025</td>
+            <td class="p-4">€200</td>
+            <td class="p-4">Boom, Belgium</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4">Coachella</td>
+            <td class="p-4">12-04-2025</td>
+            <td class="p-4">$500</td>
+            <td class="p-4">Indio, California</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4">Glastonbury</td>
+            <td class="p-4">26-06-2025</td>
+            <td class="p-4">£250</td>
+            <td class="p-4">Pilton, England</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4">Lollapalooza</td>
+            <td class="p-4">01-08-2025</td>
+            <td class="p-4">$300</td>
+            <td class="p-4">Chicago, Illinois</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4">Ultra Music Festival</td>
+            <td class="p-4">20-03-2025</td>
+            <td class="p-4">$400</td>
+            <td class="p-4">Miami, Florida</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
     <Footer class="mt-auto"></Footer>  
   </div>
 </template>
