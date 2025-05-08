@@ -141,23 +141,86 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-8 ">  
+      <div class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-2 ">  
         <div class="h-auto rounded">
-          <img src="./assets/media/EventPoster1.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card1Animation">
+          <img src="./assets/media/EventPoster1.png" alt="House" class="w-auto h-4/6 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card1Animation">
         </div>
         <div class="h-auto rounded">
-          <img src="./assets/media/EventPoster2.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card3Animation">
+          <img src="./assets/media/EventPoster2.png" alt="House" class="w-auto h-4/6 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card3Animation">
         </div>
         <div class="h-auto rounded">
-          <img src="./assets/media/EventPoster3.png" alt="House" class="w-auto h-3/4 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card2Animation">
+          <img src="./assets/media/EventPoster3.png" alt="House" class="w-auto h-4/6 object-cover m-0 p-0 mx-auto rounded" id="SmallBoxTransform" ref="card2Animation">
         </div>
       </div>
     </div>
-    <div class="footer">
-      <div class="h-20 w-full bg-gradient-to-r from-gray-800 to-black flex justify-between items-center px-8 text-white">
-        <p class="text-sm font-semibold">© 2025 Soundscape - All Rights Reserved</p>
+    <!-- Event calander -->
+    <div class="relative w-full">
+        <img src="./assets/media/soundback.png" class="w-2/5 h-1/4 object-cover mx-auto rounded" id="SmallTransform">
+        <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-4xl mb-15" style=" font-family: fantasy;">
+         🎶 Upcoming events 🎙
+        </p>
       </div>
+    <div class="overflow-x-auto w-90% mx-auto p-10">
+      <table class="min-w-full bg-gray-500 border-collapse border rounded-2xl border-gray-800 mb-20" ref="tableAnimation">
+        <thead>
+          <tr class="bg-gray-600">
+            <th class="p-4 text-left text-sm font-semibold text-gray-700">Event</th>
+            <th class="p-4 text-left text-sm font-semibold text-gray-700">Date</th>
+            <th class="p-4 text-left text-sm font-semibold text-gray-700">Price</th>
+            <th class="p-4 text-left text-sm font-semibold text-gray-700">Location</th>
+            <th class="p-4 text-left text-sm font-semibold text-gray-700"></th> 
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-4">Tomorrowland</td>
+            <td class="p-4">20-07-2025</td>
+            <td class="p-4">€200</td>
+            <td class="p-4">Boom, Belgium</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4">Coachella</td>
+            <td class="p-4">12-04-2025</td>
+            <td class="p-4">$500</td>
+            <td class="p-4">Indio, California</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4">Glastonbury</td>
+            <td class="p-4">26-06-2025</td>
+            <td class="p-4">£250</td>
+            <td class="p-4">Pilton, England</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4">Lollapalooza</td>
+            <td class="p-4">01-08-2025</td>
+            <td class="p-4">$300</td>
+            <td class="p-4">Chicago, Illinois</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="p-4">Ultra Music Festival</td>
+            <td class="p-4">20-03-2025</td>
+            <td class="p-4">$400</td>
+            <td class="p-4">Miami, Florida</td>
+            <td class="p-4">
+              <button class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 cursor-pointer">Book Now!</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+   <Footer></Footer>
   </div>
 </template>
 
@@ -177,9 +240,6 @@ function bookNow() {
 function WorkInProgress() {
   toast.error('🚧 This is still in development!')
 }
-
-// LOGIN
-const showLogin = ref(false)
 
 const logo = ref(null);
 const StartListening = ref(null);
